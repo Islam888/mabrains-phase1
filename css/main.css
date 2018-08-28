@@ -1,32 +1,8 @@
-@font-face {
-    font-family: 'Audery';
-    src: url("https://islam888.github.io/Mabrains/fonts/Audrey-Normal.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Audery';
-    font-style: oblique;
-    src: url("https://islam888.github.io/Mabrains/fonts/Audrey-NormalOblique.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Audery';
-    font-weight: bold;
-    src: url("https://islam888.github.io/Mabrains/fonts/Audrey-Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: 'Audery';
-    font-weight: bold;
-    font-style: oblique;
-    src: url("https://islam888.github.io/Mabrains/fonts/Audrey-BoldOblique.otf") format("opentype");
-}
-
 html,
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Audery';
+    font-family: 'Karla', sans-serif;
     color: black;
     background: white;
 }
@@ -51,7 +27,7 @@ body {
 
 #title span {
     color: #326A84;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .container-fluid {
@@ -63,7 +39,7 @@ body {
     padding-right: 20px;
 }
 
-.navbar-nav li:nth-child(6) {
+.navbar-nav li:nth-child(7) {
     padding-right: 0 !important;
 }
 
@@ -200,34 +176,35 @@ footer a {
     margin-top: 0.8rem;
 }
 
-#scollTotopBtn {
+#scrollTotopBtn {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Fixed/sticky position */
-    bottom: 20px;
-    /* Place the button at the bottom of the page */
-    right: 30px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    /* Make sure it does not overlap */
-    border: none;
-    /* Remove borders */
-    outline: none;
-    /* Remove outline */
-    background-color: #326A84;
-    /* Set a background color */
-    cursor: pointer;
-    /* Add a mouse pointer on hover */
-    padding: 20px;
-    /* Some padding */
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 50%;
-    font-size: 18px;
-    /* Increase font size */
+    background-color: #2B97DD;
+    z-index: 100;
+    border: 1px solid #2B97DD;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-#scollTotopBtn:hover {
-    background-color: #2B97DD;
+#scrollTotopBtn:hover {
+    background-color: #326A84;
+}
+
+#scrollTotopBtn:after {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 0;
+    border-top: solid transparent 15px;
+    border-right: solid transparent 15px;
+    border-bottom: solid white 15px;
+    border-left: solid transparent 15px;
 }
 
 #arrow {
@@ -260,7 +237,7 @@ footer a {
 }
 
 .card-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
 }
 
@@ -374,7 +351,7 @@ figure {
 }
 
 #fixed {
-    background-image: url('https://islam888.github.io/Mabrains/img/fixed.jpeg');
+    background-image: url('/img/fixed.jpg');
     opacity: 0.3;
     position: fixed;
     display: block;
@@ -490,12 +467,22 @@ footer .name {
 
 .apis-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "left main main" "left right right";
-    grid-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "left main right";
+    grid-gap: 30px;
     width: 100%;
     height: 100%;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "vision mission";
+    grid-column-gap: 10px;
+    width: 80%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .left {
@@ -513,13 +500,17 @@ footer .name {
     border-radius: 0.25rem;
     margin-right: auto;
     margin-left: auto;
+    height: 60%;
+
 }
 
-.main {
+.apis-wrapper .main {
     grid-area: main;
     position: relative;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #DFF1C7;
@@ -528,13 +519,17 @@ footer .name {
     border-radius: 0.25rem;
     margin-right: auto;
     margin-left: auto;
+    height: 60%;
+
 }
 
-.right {
+.apis-wrapper .right {
     grid-area: right;
     position: relative;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #F2D8F3;
@@ -543,6 +538,7 @@ footer .name {
     border-radius: 0.25rem;
     margin-right: auto;
     margin-left: auto;
+    height: 60%;
 }
 
 .third {
@@ -576,6 +572,68 @@ footer .name {
     margin-right: auto;
 }
 
+.articles-wrapper .right {
+    grid-area: right;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #F2D8F3;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.articles-wrapper .main {
+    grid-area: main;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #DFF1C7;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.vision {
+    grid-area: vision;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E6EDF5;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 380px;
+}
+
+.mission {
+    grid-area: mission;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E6EDF5;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 380px;
+}
+
 .card-inner {
     padding: 1.25rem;
     display: flex;
@@ -584,11 +642,15 @@ footer .name {
     /* align-items: stretch; */
 }
 
-.card-inner .btn {
+#articles .btn {
     width: 100px;
     align-self: flex-end;
     position: absolute;
     bottom: 20px;
+}
+#apis .btn {
+    width: 100px;
+    align-self: flex-end;
 }
 
 #apis h2,
@@ -596,28 +658,68 @@ footer .name {
     margin-bottom: 1.5rem;
 }
 
-#aboutus p,
+/* .card-text {
+    text-align: justify;
+} */
+
 #contactus p {
     text-align: justify;
 }
 
-.about {
-    background: url('https://islam888.github.io/Mabrains/img/about.svg') no-repeat center;
-    background-size: cover;
-}
+
 
 .about h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 p {
     font-size: 1.2rem;
-    line-height: 1;
 }
 
 footer h5 {
     font-size: 1rem;
+}
+
+
+svg {
+    min-width: 200px;
+}
+
+.circle {
+    position: absolute;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    background-color: #2B97DD;
+    z-index: 100;
+    border: 1px solid #2B97DD;
+}
+
+.left-circle {
+    left: 155px;
+    top: 94%;
+}
+
+
+.circle:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 40%;
+    border-top: solid white 15px;
+    border-right: solid transparent 15px;
+    border-bottom: solid transparent 15px;
+    border-left: solid transparent 15px;
+}
+
+.circle:hover {
+    background-color: #0077B5;
+    border: 1px solid #0077B5;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 @media screen and (max-width: 1100px) {
@@ -667,6 +769,14 @@ footer h5 {
         width: 25%;
     }
     .articles-wrapper {
+        width: 100%;
+    }
+    .about-wrapper {
+        grid-column-gap: 30px;
+        width: 100%;
+    }
+    .vision,
+    .mission {
         width: 100%;
     }
 }
@@ -766,21 +876,25 @@ footer h5 {
     }
     p {
         font-size: 1rem;
-        line-height: 1;
+        line-height: 1.2;
     }
     #apis .btn,
     #articles .btn {
         font-size: 0.9rem;
         width: 85px;
         height: 25px;
-        padding: 3px;
+        padding: 1px;
+    }
+    .about h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
     }
 }
 
 @media screen and (max-width: 576px) {
     .container-fluid {
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .carousel-caption {
         top: 60%;
@@ -854,10 +968,7 @@ footer h5 {
     p {
         font-size: 1rem;
     }
-    .card-title {
-        font-size: 18px;
-        font-weight: 400;
-    }
+
     .line-services {
         left: 120px;
     }
@@ -967,6 +1078,19 @@ footer h5 {
     .image-3 {
         width: 100%;
         height: 180px;
+    }
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: "vision" "mission";
+        grid-gap: 10px;
+    }
+    .vision,
+    .mission {
+        width: 60%;
+    }
+    .about h3 {
+        font-size: 1rem;
+        font-weight: 600;
     }
 }
 
