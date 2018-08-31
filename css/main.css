@@ -680,12 +680,24 @@ svg {
     border: 1px solid #9b9b9b;
     left: calc(50% - 25px);
     top: calc(100% - 25px);
+}
+
+.circle-shadow {
     -webkit-box-shadow: 14px 14px 20px -6px rgba(80,76,97,0.25);
     -moz-box-shadow: 14px 14px 20px -6px rgba(80,76,97,0.25);
     box-shadow: 14px 14px 20px -6px rgba(80,76,97,0.25);
 }
 
+.circle-shadow-transition {
+    transition: box-shadow;
+    transition-duration: 0.8s;
+}
 
+.circle-shadow-rotate {
+    -webkit-box-shadow: -14px -14px 20px -6px rgba(80,76,97,0.25);
+    -moz-box-shadow: -14px -14px 20px -6px rgba(80,76,97,0.25);
+    box-shadow: -14px -14px 20px -6px rgba(80,76,97,0.25); 
+}
 
 
 .circle::after {
