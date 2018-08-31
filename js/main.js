@@ -1,5 +1,4 @@
 window.onload = () => {
-
     //listen to scroll and show the scrollTotopBtn button when scrolling more than 650 when the navbar slides up.
     window.onscroll = () => {
         if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
@@ -40,18 +39,6 @@ window.onload = () => {
             })
         }
     }
-    /*     window.addEventListener('resize', (e) => {
-            if (window.innerWidth <= 768) {
-                document.querySelector('.right').children[0].setAttribute('src', 'img/face-swapping3.jpg')
-            } else if (window.innerWidth > 1100) {
-                document.querySelector('.main').children[0].setAttribute('src', 'img/sentiment-analysis.jpeg')
-                document.querySelector('.right').children[0].setAttribute('src', 'img/face-swapping.jpg')
-            } else if (window.innerWidth <= 1100) {
-                document.querySelector('.main').children[0].setAttribute('src', 'img/sentiment-analysis2.jpeg')
-                document.querySelector('.right').children[0].setAttribute('src', 'img/face-swapping2.jpg')
-            }
-        }) */
-
     //open apis cards when click on button and close it when click again while open
     const openCloseApis = (apisCard, clickedCircle) => {
         const apisCardText = apisCard.querySelector('.card-inner').children
@@ -91,21 +78,5 @@ window.onload = () => {
             openCloseApis(e.target.parentElement, e.target)
         })
     }
-    /*     const allApisCards = document.querySelector('.apis-wrapper').children
-        for (const apisCard of allApisCards) {
-            apisCard.addEventListener('mouseover', () => {
-                if (apisCard.classList.contains('card-shadow')) {
-                    apisCard.classList.add('card-shadow-transition')
-                    apisCard.classList.add('card-hover-shadow')
-                    apisCard.classList.remove('card-shadow')
-                } else {
-                    apisCard.classList.add('card-shadow')
-                    apisCard.classList.remove('card-hover-shadow')
-                }
-                
-            })
-        } */
-
-
 
 }
