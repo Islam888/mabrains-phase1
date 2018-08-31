@@ -347,7 +347,7 @@ figure {
 }
 
 #fixed {
-    background-image: url('/img/fixed.jpg');
+    background-image: url('https://github.com/Islam888/mabrains-phase1/tree/master/img/fixed.jpg');
     opacity: 0.3;
     position: fixed;
     display: block;
