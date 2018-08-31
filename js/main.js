@@ -61,10 +61,13 @@ window.onload = () => {
             apisCard.classList.remove('card-part-height')
             clickedCircle.classList.add('circle-triangle-rotate-transition')
             clickedCircle.classList.add('circle-triangle-rotate')
+            clickedCircle.classList.add('circle-shadow-transition')
+            clickedCircle.classList.add('circle-shadow-rotate')
         } else {
             apisCard.classList.add('card-part-height')
             apisCard.classList.remove('card-full-height')
             clickedCircle.classList.remove('circle-triangle-rotate')
+            clickedCircle.classList.remove('circle-shadow-rotate')
 
         }
         for (var i = 2; i < 4; i++) {
