@@ -5,11 +5,6 @@ var canvas = document.querySelector("canvas");
 canvas.width = document.querySelector('.carousel-item').clientWidth;
 canvas.height = document.querySelector('.carousel-item').clientHeight;
 var ctx = canvas.getContext("2d");
-//To return to the normal size after resizing
-/* window.addEventListener('resize', () => {
-  canvas.width = document.querySelector('.carousel-item').clientWidth;
-  canvas.height = document.querySelector('.carousel-item').clientHeight;
-}) */
 var TAU = 2 * Math.PI;
 times = [];
 function loop() {
