@@ -724,7 +724,7 @@ svg {
 
 .hidden-transition {
     transition: visibility;
-    transition-duration: 0.2s;
+    transition-duration: 0.1s;
 }
 
 .show-text {
