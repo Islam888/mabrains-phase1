@@ -444,17 +444,6 @@ footer .name {
     margin-bottom: 0.5rem;
 }
 
-@keyframes lineMove {
-    100% {
-        width: 70%;
-    }
-}
-
-@keyframes lineMove {
-    100% {
-        width: 70%;
-    }
-}
 
 .apis-wrapper {
     display: grid;
@@ -755,6 +744,67 @@ svg {
     transition-duration: 0.5s;
 }
 
+.nsfw-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "img txt";
+    width: 80%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    grid-gap: 30px;
+    margin-top: 80px;
+    
+}
+
+.nsfw-img {
+    grid-area: img;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.nsfw-img img {
+    width: 100%;
+}
+.nsfw-text {
+    grid-area: txt;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    line-height: 2;
+}
+
+.nsfw-text .title {
+    font-size: 28px;
+}
+
+.no-padding {
+    padding-top: 0;
+    margin-top: 6%;
+}
+
+.nsfw-main {
+    height: 80%;
+}
+
+.apis-wrapper a {
+    text-decoration: none;
+    color: #000;
+}
+
 @media screen and (max-width: 1100px) {
     .container-fluid {
         padding-right: 50px;
@@ -785,6 +835,11 @@ svg {
     .vision,
     .mission {
         width: 100%;
+    }
+    .nsfw-wrapper {
+        width: 90%;
+        grid-gap: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -829,6 +884,17 @@ svg {
     .apis-wrapper {
         width: 100%;
     }
+    .nsfw-wrapper {
+        width: 98%;
+        grid-gap: 20px;
+        margin-top: 20px;
+    }
+    .nsfw-text .title {
+        font-size: 24px;
+    }
+    .nsfw-text {
+        line-height: 1.5;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -857,23 +923,7 @@ svg {
     .social h4 {
         font-size: 120%;
     }
-    /*     #apis .right {
-        grid-area: right;
-        position: relative;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: #E6EDF5;
-        background-clip: border-box;
-        border: 1px solid rgba(0, 0, 0, 0.125);
-        border-radius: 0.25rem;
-    } */
-    /*     .right .card-img-bottom {
-        width: 100%;
-    } */
+
     .apis-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas: "left" "main" "right";
@@ -912,6 +962,21 @@ svg {
     .card-title {
         font-size: 1.2rem;
         font-weight: 500;
+    }
+    .nsfw-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "img" "txt";
+        width: 80%;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        grid-gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+    .nsfw-img img {
+        height: 100%;
     }
 }
 
